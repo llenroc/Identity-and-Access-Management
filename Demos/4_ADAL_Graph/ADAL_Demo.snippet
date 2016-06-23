@@ -1,0 +1,143 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ADAL_Demo_1_Define_Constants</Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        // Tenant information
+        private const string tenantName = "";
+        private const string tenantId = "";
+        private const string authority = "https://login.microsoftonline.com/" + tenantId;
+
+        // Application information
+        private const string clientId = "";
+        private const string redirectUri = "";
+
+        // Resource information - Azure AD Graph
+        private const string resource = "https://graph.windows.net";
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ADAL_Demo_2_Add_GetTokenForUser</Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        public static string GetTokenForUser()
+        {
+            AuthenticationContext authnContext = new AuthenticationContext(authority);
+
+            AuthenticationResult authnResult = authnContext.AcquireToken(
+                resource, clientId, new Uri(redirectUri));
+
+            return authnResult.AccessToken;
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ADAL_Demo_3_Call_GetTokenForUser</Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+            string accessToken = GetTokenForUser();
+            Console.WriteLine(accessToken);
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ADAL_Demo_4_Add_AcquireTokenAsyncForUser</Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        public static async Task<string> AcquireTokenAsyncForUser()
+        {
+            return GetTokenForUser();
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ADAL_Demo_5_Call_AcquireTokenAsyncForUser</Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+            // Graph API Demo
+            Uri servicePointUri = new Uri(resource);
+            Uri serviceRoot = new Uri(servicePointUri, tenantId);
+            ActiveDirectoryClient adClient = new ActiveDirectoryClient(
+                serviceRoot, 
+                async () => await AcquireTokenAsyncForUser());
+
+            try
+            {
+                CreateUser(adClient);
+                Console.WriteLine("User added to directory");
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine(ex.InnerException.Message);
+                }
+                Console.WriteLine(ex.Message);
+            }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ADAL_Demo_6_Add_CreateUser</Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        public static void CreateUser(ActiveDirectoryClient adClient)
+        {
+            // Create a new user object.
+            var newUser = new User()
+            {
+                // Required settings
+                DisplayName = "Jay Hamlin",
+                UserPrincipalName = "jay@" + tenantName + ".onmicrosoft.com",
+                PasswordProfile = new PasswordProfile()
+                {
+                    Password = "H@ckMeNow!",
+                    ForceChangePasswordNextLogin = false
+                },
+                MailNickname = "JayHamlin",
+                AccountEnabled = true,
+
+                // Some (not all) optional settings
+                GivenName = "Jay",
+                Surname = "Hamlin",
+                JobTitle = "Programmer",
+                Department = "Development",
+                City = "Dallas",
+                State = "TX",
+                Mobile = "214-123-1234",
+            };
+
+            // Add the user to the directory
+            adClient.Users.AddUserAsync(newUser).Wait();
+            }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

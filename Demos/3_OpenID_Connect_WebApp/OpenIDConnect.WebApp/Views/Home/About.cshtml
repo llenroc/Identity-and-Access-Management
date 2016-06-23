@@ -1,0 +1,51 @@
+﻿
+@{
+    var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
+}
+
+<h1>Authentication</h1>
+<div class="row">
+    <div class="col-md-3">
+        <h4>User Authenticated</h4>
+        <p style="font-family:'Courier New'">
+            @claimsIdentity.IsAuthenticated.ToString()
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h4>Authentication Type</h4>
+        <p style="font-family:'Courier New'">
+            @claimsIdentity.AuthenticationType.ToString()
+        </p>
+    </div>
+</div>
+
+<h1>User Claims</h1>
+<div class="row">
+    <div class="col-md-6">
+        <h4>Claim Type</h4>
+    </div>
+    <div class="col-md-6">
+        <h4>Claim Value</h4>
+    </div>
+</div>
+
+@{
+    if (claimsIdentity != null)
+    {
+        foreach (System.Security.Claims.Claim c in claimsIdentity.Claims)
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <p style="font-family:'Courier New'">
+                        @c.Type.ToString()
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p style="font-family:'Courier New'">
+                        @c.Value.ToString()
+                    </p>
+                </div>
+            </div>
+        }
+    }
+}
