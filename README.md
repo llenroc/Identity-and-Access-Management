@@ -4,7 +4,7 @@ Identity and Access Management is a cornerstone to any solution architecture tod
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ##Presentation
-Download the [PowerPoint](https://github.com/GSIAzureCOE/Identity-and-Access-Management/blob/master/todo.pptx).
+Download the [PowerPoint](Identity and Access Management.pptx?raw=1).
 The PowerPoint includes full speaker notes helping you understand the slides, and everything you need to deliver the session.
 
 Watch the [video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-access-management/todo.mp4).
