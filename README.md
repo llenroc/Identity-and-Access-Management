@@ -29,7 +29,7 @@ Watch the [video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-
 * [[Azure Active Directory Domain Services documentation]] (https://azure.microsoft.com/en-us/documentation/services/active-directory-ds/)
 * [[Multi-Factor Authentication]] (https://azure.microsoft.com/en-us/documentation/services/multi-factor-authentication/)
 * [[Cloud App Discovery]] (https://azure.microsoft.com/en-us/documentation/articles/active-directory-cloudappdiscovery-whatis/)
-* [[Azure AD Application Proxy]] https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-enable/)
+* [[Azure AD Application Proxy]] (https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-enable/)
 
 
 
