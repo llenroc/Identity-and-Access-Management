@@ -1,4 +1,4 @@
-This guide provides setup requirements and steps to demonstrate how to extend an on-premises multi-forest Windows Server Active Directory environment to Azure Active Directory using Azure AD Connect.
+This guide provides setup requirements and steps to demonstrate how to extend an on-premises multi-forest Windows Server Active Directory environment to Azure Active Directory using Azure AD Connect. For more information see <a href="https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect-get-started-custom/">Azure AD Connect custom deployment</a> 
 
 Pre-Requisites
 --------------
@@ -18,20 +18,30 @@ Setup
 
 1.  Logon to the classic Azure management portal
 
-2.  Enable Directory Synchronization on the Azure Active Directory you created in the previous example
-
-3.  Download the Azure AD Connect tool to one of the Active Directory domain controllers
+2.  Download the Azure AD Connect tool to one of the Active Directory domain controllers
 
 Demo Steps
 ----------
 
 *Estimated time: 15 minutes*
 
-1.  On one of the Active Directory servers install the **Azure AD Connect** tool
+1.  In the classic Azure Management portal, click on ACTIVE DIRECTORY in the left navigation.
 
-2.  In the **Azure AD Connect** installation tool, click **Customize**.
 
-3.  In the Install required components click on a couple of options to show that you can customize the installation of Azure AD Connect. Make sure to **uncheck** any options **before continuing**.
+2.	Click on the DIRECTORY INTEGRATION tab at the top of the page.
+3.	Set the DIRECTORY SYNC option to ACTIVATED.
+
+
+![image](media/AADimage13.png)
+
+
+4.	Show the 3 steps under the deploy and manage section.
+
+5.  On one of the Active Directory servers install the **Azure AD Connect** tool
+
+6.  In the **Azure AD Connect** installation tool, click **Customize**.
+
+7.  In the Install required components click on a couple of options to show that you can customize the installation of Azure AD Connect. Make sure to **uncheck** any options **before continuing**.
 
 ![image](media/AADimage1.png)
 
