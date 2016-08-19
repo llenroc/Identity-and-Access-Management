@@ -8,9 +8,16 @@ The PowerPoint includes full speaker notes helping you understand the slides, an
 Watch the [video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-access-management/todo.mp4).
 
 ## Demos
-1. Demo 1
-[[source code](https://github.com/GSIAzureCOE/Identity-and-Access-Management/blob/master/todo)]
-[[demo script](https://github.com/GSIAzureCOE/Identity-and-Access-Management/blob/master/todo.docx)]
+1. App Integration
+[[source code & demo script](./Demo1-App_Integration/)]
+[[video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-access-management/todo.mp4)]
+
+2. Azure AD Connect
+[[source code & demo script](./Demo2-AAD_Connect/)]
+[[video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-access-management/todo.mp4)]
+
+3. Open ID Integration
+[[source code & demo script](./Demo3-OpenID_Connect_WebApp/)]
 [[video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-access-management/todo.mp4)]
 
 ## Session objectives
