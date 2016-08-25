@@ -18,7 +18,7 @@ Watch the [video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-
 
 3. Open ID Integration
 [[source code & demo script](./Demo3-OpenID_Connect_WebApp/)]
-[[video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-access-management/todo.mp4)]
+[[video](http://azurecatgsicontent.blob.core.windows.net/identity-and-access-management/AzureADAuth.mp4)]
 
 ## Session objectives
 * Discuss the need and benefits for AAD and discuss best practices
