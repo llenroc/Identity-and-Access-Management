@@ -10,11 +10,11 @@ Watch the [video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-
 ## Demos
 1. App Integration
 [[source code & demo script](./Demo1-App_Integration/)]
-[[video](https://azurecatgsicontent.blob.core.windows.net/idenitity-and-access-management/Identity_Demo_1.mp4)]
+[[video](http://azurecatgsicontent.blob.core.windows.net/identity-and-access-management/Identity_Demo_1.mp4)]
 
 2. Azure AD Connect
 [[source code & demo script](./Demo2-AAD_Connect/)]
-[[video](https://gsiazurecoecontent.blob.core.windows.net/identity-and-access-management/todo.mp4)]
+[[video](http://azurecatgsicontent.blob.core.windows.net/identity-and-access-management/AADConnect.mp4)]
 
 3. Open ID Integration
 [[source code & demo script](./Demo3-OpenID_Connect_WebApp/)]
